@@ -1,4 +1,3 @@
-
 .main-container{
   margin-right: 10vh;
     margin-left: 10vh;
@@ -748,3 +747,409 @@
   }
   
   }
+
+
+/* =========================================================
+   FINAL RESPONSIVE OVERRIDES
+   These rules are intentionally placed at the end so they
+   override the older responsive rules above.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ---------------- Profile ---------------- */
+
+.profile-container {
+    width: 100%;
+    padding: 30px;
+}
+
+.profile-header {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.username {
+    font-size: clamp(24px, 4vh, 36px);
+}
+
+.action-buttons-block-1 {
+    width: 100%;
+    max-width: none;
+}
+
+.action-buttons button {
+    width: 120px;
+    height: 42px;
+}
+
+/* ---------------- Feed ---------------- */
+
+.feed-container {
+    width: 100%;
+    padding: 32px;
+    column-count: 5;
+    column-gap: 15px;
+    columns: auto 5;
+}
+
+.pin-card {
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.pin-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* ---------------- Work ---------------- */
+
+.work-block {
+    width: 100%;
+    padding: 0;
+}
+
+.work-block-field-1 {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.work-block-items {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.work-item-placeholder,
+.work-item-placeholder-common {
+    width: 100%;
+}
+
+/* ---------------- More Actions ---------------- */
+
+.moreActions-container {
+    width: 220px;
+    max-width: calc(100vw - 24px);
+}
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .feed-container {
+        column-count: 4;
+        columns: auto 4;
+        padding: 28px;
+    }
+
+    .profile-container {
+        padding: 25px;
+    }
+
+    .work-block-items {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .profile-container {
+        padding: 24px;
+        margin-top: 5vh;
+    }
+
+    .profile-header {
+        gap: 20px;
+    }
+
+    .action-buttons-block-1 {
+        width: auto;
+    }
+
+    .feed-container {
+        column-count: 3;
+        columns: auto 3;
+        padding: 22px;
+        column-gap: 12px;
+    }
+
+    .work-block-items {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .tab-btn {
+        font-size: 18px;
+    }
+}
+
+/* =========================================================
+   647px
+   ========================================================= */
+
+@media (max-width: 647px) {
+
+    .profile-container {
+        width: 100%;
+        margin: 0;
+        padding: 20px 16px;
+        border-radius: 0;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+
+    .user-profile-detail-block-1 {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .username {
+        font-size: 28px;
+    }
+
+    .user-role {
+        font-size: 15px;
+    }
+
+    .address {
+        font-size: 13px;
+    }
+
+    .followers-container {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .action-buttons-block-1 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .action-buttons button {
+        width: 120px;
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .work-block {
+        width: 100%;
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .work-block-field-1 {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .tab-btn {
+        font-size: 16px;
+    }
+
+    .work-block-items {
+        grid-template-columns: 1fr;
+        padding: 8px 0;
+        gap: 15px;
+    }
+
+    .work-item-placeholder,
+    .work-item-placeholder-common {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .feed-container {
+        column-count: 2;
+        columns: auto 2;
+        padding: 14px;
+        column-gap: 10px;
+    }
+
+    .pin-card {
+        margin-bottom: 10px;
+        border-radius: 12px;
+    }
+
+    .top-actions {
+        top: 8px;
+        right: 8px;
+    }
+
+    .save-btn {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .bottom-actions {
+        bottom: 8px;
+        right: 8px;
+        gap: 6px;
+    }
+
+    .icon-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .moreActions-container {
+        top: 8px;
+        right: 45px;
+        width: 190px;
+    }
+}
+
+/* =========================================================
+   480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-container {
+        padding: 18px 12px;
+    }
+
+    .username {
+        font-size: 25px;
+    }
+
+    .action-buttons {
+        gap: 8px;
+    }
+
+    .action-buttons button {
+        width: 110px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .feed-container {
+        padding: 8px;
+        column-gap: 8px;
+    }
+
+    .pin-card {
+        margin-bottom: 8px;
+        border-radius: 10px;
+    }
+
+    .work-block {
+        padding: 0 8px;
+    }
+
+    .work-block-field-1 {
+        gap: 14px;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+    }
+
+    .empty-post-state {
+        min-height: 50vh;
+        padding: 20px;
+    }
+
+    .empty-post-state img {
+        width: min(220px, 70vw);
+    }
+
+    .empty-post-state h2 {
+        font-size: 24px;
+    }
+
+    .empty-post-state p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .profile-container {
+        padding: 16px 10px;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .username {
+        font-size: 22px;
+    }
+
+    .action-buttons button {
+        width: 100px;
+        height: 38px;
+        font-size: 11px;
+    }
+
+    .feed-container {
+        padding: 6px;
+        column-gap: 6px;
+    }
+
+    .work-block {
+        padding: 0 5px;
+    }
+
+    .tab-btn {
+        font-size: 13px;
+    }
+
+    .moreActions-container {
+        width: 175px;
+    }
+}

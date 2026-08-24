@@ -778,7 +778,6 @@ app-header {
   column-gap: 15px;
   columns: 30vh;
 
-  padding: 32px;
 }
 
 .pin-card{
@@ -1463,7 +1462,7 @@ app-header {
   .work-block{
     width: -webkit-fill-available;
     height: auto;
-    margin: 9vh 10vh;
+    margin: 9vh 3vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
