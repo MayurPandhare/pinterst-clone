@@ -48,6 +48,11 @@ export const routes: Routes = [
     component:PostDetailComponent
   },
 
+  {
+  path: '**',
+  component: DashbordComponent
+},
+
   
  
   
