@@ -48,12 +48,7 @@ export const routes: Routes = [
     component:PostDetailComponent
   },
 
-  {
-  path: '**',
-  component: DashbordComponent
-},
-
-  
+   
  
   
   //{ path: '', redirectTo: '', pathMatch: 'full' }, // Default route
@@ -70,6 +65,11 @@ export const routes: Routes = [
       
     ]
   },
+
+  {
+    path: '**',
+    component: DashbordComponent
+  }
 
 ]
 
